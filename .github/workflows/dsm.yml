@@ -41,9 +41,9 @@ jobs:
         run: |
           ENVIRONMENT_PULL_REQUEST="internal_contributor"
           # set internal_contributor only if author is not MEMBER, CONTRIBUTOR or OWNER
-          if [[ "${{ github.event.pull_request.author_association }}" != "MEMBER" || "${{ github.event.pull_request.author_association }}" != "CONTRIBUTOR" || "${{ github.event.pull_request.author_association }}" != "OWNER" ]]; then
-            ENVIRONMENT_PULL_REQUEST="external_contributor"
-          fi
+          # if [[ "${{ github.event.pull_request.author_association }}" != "MEMBER" || "${{ github.event.pull_request.author_association }}" != "CONTRIBUTOR" || "${{ github.event.pull_request.author_association }}" != "OWNER" ]]; then
+          #   ENVIRONMENT_PULL_REQUEST="external_contributor"
+          # fi
           echo "environment_pull_request=$ENVIRONMENT_PULL_REQUEST" >> $GITHUB_OUTPUT
         shell: bash
 
