@@ -37,7 +37,7 @@ jobs:
       environment_pull_request: ${{ steps.validate.outputs.environment_pull_request }}
     steps:
       - name: validate
-      - id: validate
+        id: validate
         run: |
           ENVIRONMENT_PULL_REQUEST="internal_contributor"
           # set internal_contributor only if author is not MEMBER, CONTRIBUTOR or OWNER
