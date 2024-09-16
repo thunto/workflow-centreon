@@ -12,7 +12,7 @@ script_short_name="$(basename $0)"
 default_ip=$(hostname -I | awk '{print $1}')
 ###
 
-#Define default values 
+#Define default values
 
 passwords_file=/etc/centreon/generated.tobesecured         #File where the generated passwords will be temporaly saved
 tmp_passwords_file=$(mktemp /tmp/generated.XXXXXXXXXXXXXX) #Random tmp file as the /etc/centreon does not exist yet
